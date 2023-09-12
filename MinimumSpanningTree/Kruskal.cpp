@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 /*
 Edge of a graph
 */
@@ -118,24 +117,40 @@ public:
 int main()
 {
     int V = 9;
-    vector<Edge> edges = {
-        Edge(7, 6, 1),
-        Edge(8, 2, 2),
-        Edge(6, 5, 2),
-        Edge(0, 1, 4),
-        Edge(2, 5, 4),
-        Edge(8, 6, 6),
-        Edge(2, 3, 7),
-        Edge(7, 8, 7),
-        Edge(0, 7, 8),
-        Edge(1, 2, 8),
-        Edge(3, 4, 9),
-        Edge(5, 4, 10),
-        Edge(1, 7, 11),
-        Edge(3, 5, 14)};
+    vector<Edge> edges1;
+    edges1.push_back(Edge(0, 1, 4));
+    edges1.push_back(Edge(0, 7, 8));
+    edges1.push_back(Edge(1, 2, 8));
+    edges1.push_back(Edge(1, 7, 11));
+    edges1.push_back(Edge(2, 3, 7));
+    edges1.push_back(Edge(2, 8, 2));
+    edges1.push_back(Edge(2, 5, 4));
+    edges1.push_back(Edge(3, 4, 9));
+    edges1.push_back(Edge(3, 5, 14));
+    edges1.push_back(Edge(4, 5, 10));
+    edges1.push_back(Edge(5, 6, 2));
+    edges1.push_back(Edge(6, 7, 1));
+    edges1.push_back(Edge(6, 8, 6));
+    edges1.push_back(Edge(7, 8, 7));
+
+    // vector<Edge> edges2;
+    // edges2.push_back(Edge(7, 6, 1));
+    // edges2.push_back(Edge(8, 2, 2));
+    // edges2.push_back(Edge(6, 5, 2));
+    // edges2.push_back(Edge(0, 1, 4));
+    // edges2.push_back(Edge(2, 5, 4));
+    // edges2.push_back(Edge(8, 6, 6));
+    // edges2.push_back(Edge(2, 3, 7));
+    // edges2.push_back(Edge(7, 8, 7));
+    // edges2.push_back(Edge(0, 7, 8));
+    // edges2.push_back(Edge(1, 2, 8));
+    // edges2.push_back(Edge(3, 4, 9));
+    // edges2.push_back(Edge(5, 4, 10));
+    // edges2.push_back(Edge(1, 7, 11));
+    // edges2.push_back(Edge(3, 5, 14));
 
     Kruskal kruskal;
-    vector<Edge> result = kruskal.execute(edges, V);
+    vector<Edge> result = kruskal.execute(edges1, V);
     for (Edge edge : result)
         cout << edge.toString() << endl;
     return 0;
